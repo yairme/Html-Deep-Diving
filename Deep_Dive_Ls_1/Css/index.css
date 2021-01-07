@@ -1,0 +1,41 @@
+body {
+    background-image: url('../Images/Background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    overflow-y: hidden;
+    overflow-x: hidden; 
+}
+
+#container{
+    padding: 10px;
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.288);
+    color: #fff;
+    font-size: 20px;
+}
+
+#box {
+    background-image: url('../ScreenShots/Deep_Dive_1.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 10% 10%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin: 10px;
+    padding: 10px;
+}
+
+#Box {
+    background-color: #b93f20;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
