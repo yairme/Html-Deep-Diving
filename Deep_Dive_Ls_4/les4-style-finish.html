@@ -57,8 +57,8 @@
         function vorigeFoto() {
                 fotonummer -= 1;
 
-                if (fotonummer === aantalfotos) {
-                    fotonummer = 0;
+                if (fotonummer < 0) {
+                    fotonummer = aantalfotos - 1;
                 }
 
                 let afstandNaarLinks = -1 * (fotonummer * fotobreedte)
