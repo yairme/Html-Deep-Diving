@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="Css/style.css">
+</head>
+
+<body>
+    <div id="viewport">
+        <div id="fotoslider">
+            <div class="foto"><img src="Images/foto1.jpg" /></div>
+            <div class="foto"><img src="Images/foto2.jpg" /></div>
+            <div class="foto"><img src="Images/foto3.jpg" /></div>
+            <div class="foto"><img src="Images/foto4.jpg" /></div>
+            <div class="foto"><img src="Images/foto5.jpg" /></div>
+        </div>
+    </div>
+    <div id="controls">
+        <button id="vorige-btn">Vorige</button>
+        <button id="volgende-btn">Volgende</button>
+    </div>
+    <script>
+        var fotonummer, fotobreedte, aantalfotos, fotoslider;
+
+        function setupFotoslider() {
+            fotonummer = 0;
+            fotobreedte = 400;
+            fotoslider = document.getElementById('fotoslider');
+            console.log(fotoslider);
+            aantalfotos = fotoslider.children.length;
+
+
+            let volgendeKnop = document.getElementById('volgende-btn');
+            let vorigeKnop = document.getElementById('vorige-btn');
+
+            volgendeKnop.addEventListener("click", volgendeFoto);
+            vorigeKnop.addEventListener("click", vorigeFoto);
+        }
+
+        function volgendeFoto() {
+            fotonummer += 1;
+
+            if (fotonummer === aantalfotos) {
+                fotonummer = 0;
+            }
+
+            let afstandNaarLinks = -1 * (fotonummer * fotobreedte)
+
+            fotoslider.style.left = afstandNaarLinks + "px";
+        }
+
+        function vorigeFoto() {
+                fotonummer -= 1;
+
+                if (fotonummer === aantalfotos) {
+                    fotonummer = 0;
+                }
+
+                let afstandNaarLinks = -1 * (fotonummer * fotobreedte)
+
+                fotoslider.style.left = afstandNaarLinks + "px";
+            }
+
+        setupFotoslider();
+    </script>
+</body>
+
+</html>

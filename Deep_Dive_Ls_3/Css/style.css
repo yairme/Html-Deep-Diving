@@ -1,0 +1,17 @@
+#fotoslider {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 0;
+}
+.foto {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+#viewport {
+    position: relative;
+    width: 400px;
+    height: 410px;
+    overflow: hidden;
+}
